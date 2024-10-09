@@ -1,0 +1,46 @@
+# Created by the Bilbao Crystallographic Server
+# http://www.cryst.ehu.es
+# Date: 27/11/2022 06:19:45
+
+# 1603015.cif -- non-magnetic
+
+data_uFoWJUar
+_audit_creation_date               2022-11-27
+_audit_creation_method             "Bilbao Crystallographic Server"
+_symmetry_Int_Tables_number        185
+#_symmetry_space_group_name_H-M    "P6_3cm1'"
+_cell_length_a                     7.8200
+_cell_length_b                     7.8200
+_cell_length_c                     7.3600
+_cell_angle_alpha                  90.0000
+_cell_angle_beta                   90.0000
+_cell_angle_gamma                  120.0000
+
+loop_
+_symmetry_equiv_pos_site_id
+_symmetry_equiv_pos_as_xyz
+   1   x,x-y,z+1/2
+   2   -x+y,y,z+1/2
+   3   -y,-x,z+1/2
+   4   x-y,x,z+1/2
+   5   y,-x+y,z+1/2
+   6   -x,-y,z+1/2
+   7   -x,-x+y,z
+   8   x-y,-y,z
+   9   y,x,z
+  10   -x+y,-x,z
+  11   -y,x-y,z
+  12   x,y,z
+
+loop_
+_atom_site_label
+_atom_site_type_symbol
+_atom_site_fract_x
+_atom_site_fract_y
+_atom_site_fract_z
+_atom_site_occupancy
+O1 O 0.33330 0.00000 0.06250 1.0000
+O2 O 0.66670 0.00000 0.93750 1.0000
+H1 H 0.33330 0.00000 0.17400 1.0000
+H2 H 0.43800 0.00000 0.02600 1.0000
+H3 H 0.77200 0.10500 0.97500 1.0000
