@@ -12,7 +12,7 @@
 &SYSTEM
   degauss =   1.4699723600d-02
   ecutrho =   4.8000000000d+02
-  ecutwfc =   OPTIMAL_VALUE
+  ecutwfc =   50
   ibrav = 0
   nat = 36
   nosym = .false.
