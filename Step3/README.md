@@ -19,16 +19,13 @@ chmod +x analysis.sh
 ```
 The result is stored in `data.csv`. It should look like (use `cat data.csv` to see the content of the file)
 
-| ecutwfc | total_energy  | time   |
-|---------|---------------|--------|
-| 15      | -508.69126778 | 113.49 |
-| 20      | -520.09375553 | 150.72 |
-| 30      | -527.19933481 | 302.34 |
-| 35      | -527.82146108 | 327.47 |
-| 40      | -528.00010264 | 424.83 |
-| 45      | -528.04379905 | 607.58 |
-| 50      | -528.05183076 | 548.88 |
-| 55      | -528.05545306 | 626.56 |
+| ecutwfc | total_energy   | time   |
+|---------|----------------|--------|
+| 30      | -520.77936283  | 124.29 |
+| 40      | -521.60793274  | 176.14 |
+| 50      | -521.65820463  | 260.91 |
+| 60      | -521.66852127  | 353.09 |
+| 70      | -521.67879795  | 469.49 |
 
 The energy should converge for large enough `ecutwfc`, the optimal energy cutoff is such that it is close to the convergent value and minimizes the execution time. 
 
