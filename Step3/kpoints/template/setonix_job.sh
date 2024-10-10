@@ -13,10 +13,11 @@
 export OMP_NUM_THREADS=1
 # ---
 # Temporal workaround for avoiding Slingshot issues on shared nodes:
-export FI_CXI_DEFAULT_VNI=$(od -vAn -N4 -tu < /dev/urandom)
+FI_CXI_DEFAULT_VNI=$(od -vAn -N4 -tu < /dev/urandom)
+export FI_CXI_DEFAULT_VNI
 
 module load quantum-espresso/7.2
 
 # -----Executing command:
-srun -u -N $SLURM_JOB_NUM_NODES -n $SLURM_NTASKS -c $OMP_NUM_THREADS -m block:block:block pw.x -in pw.in > pw.out
+srun -u -N "$SLURM_JOB_NUM_NODES" -n "$SLURM_NTASKS" -c "$OMP_NUM_THREADS" -m block:block:block pw.x -in pw.in > pw.out
 #=====END====
