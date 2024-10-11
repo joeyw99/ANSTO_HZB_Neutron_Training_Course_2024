@@ -1,0 +1,6 @@
+&input
+asr='simple'
+amass(1) = 1.00794
+amass(2) = 15.9994
+flfrc='IceIh444.fc'
+flfrq='IceIh444.freq'

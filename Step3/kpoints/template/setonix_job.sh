@@ -2,6 +2,7 @@
 #SBATCH --account=pawseyXXXX
 #SBATCH --partition=work
 #SBATCH --nodes=1
+#SBATCH --ntasks-per-node=8
 #SBATCH --time=1:00:00
 #SBATCH --mem=50GB
 #SBATCH --output=stdout.txt

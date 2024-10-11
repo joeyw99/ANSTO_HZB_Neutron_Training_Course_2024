@@ -16,15 +16,15 @@ For macOS and GNU/LINUX, we can use the `ssh` command from the Terminal.
 ## Configure PuTTY.
 * Add `setonix.pawsey.org.au` to *Sessions --> Host Name*. Add Setonix to *Saved Sessions*. 
 
-![putty_configuration1.png](PuTTY_Session.png)
+![putty_configuration1.png](figures/PuTTY_Session.png)
 
 * Add your Pawsey username (provided) under *Connection --> Data --> Auto-login username*.
 
-![putty_configuration2.png](PuTTY_Connection_Data.png)
+![putty_configuration2.png](figures/PuTTY_Connection_Data.png)
 
 * Return to *Sessions* nd click save. 
 
-![putty_configuration3.png](PuTTY_Session2.png)
+![putty_configuration3.png](figures/PuTTY_Session2.png)
 
 * Click Open to start an ssh connection. Use your Pawsey password to login. 
 
