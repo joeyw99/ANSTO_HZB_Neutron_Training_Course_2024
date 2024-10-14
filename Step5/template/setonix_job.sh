@@ -9,7 +9,7 @@
 #SBATCH --error=stderr.txt
 #SBATCH --mail-type=END
 #SBATCH --mail-user=user@email.com
-#SBATCH --job-name=IceIh_RELAX
+#SBATCH --job-name=IceIh_DFPT
 
 export OMP_NUM_THREADS=1
 # ---

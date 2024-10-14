@@ -1,5 +1,5 @@
 &input
    fildyn='IceIh.dyn',
    zasr='simple',
-   flfrc='IceIh444.fc'
+   flfrc='IceIh.fc'
  /
