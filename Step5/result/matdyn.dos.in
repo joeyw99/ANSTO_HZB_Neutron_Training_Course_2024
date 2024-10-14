@@ -1,0 +1,16 @@
+&INPUT
+ asr='simple'
+ amass(1) = 1.00794
+ amass(2) = 15.9994
+ flfrc='IceIh.fc'
+ dos = .true
+ nk1 = 4
+ nk2 = 4
+ nk3 = 4
+ deltaE = 0.1
+ degauss = 0.5
+ flfrq = 'IceIh.dos.freq'
+ flvec = 'IceIh.dos.modes'
+ fleig = 'IceIh.dos.eig'
+ fldyn = 'IceIh.dos.dynmat'
+/

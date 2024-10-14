@@ -1,0 +1,55 @@
+
+     Program MATDYN v.7.2 starts on 15Oct2024 at  7:14:47 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      64 processor cores
+     Number of MPI processes:                64
+     Threads/MPI process:                     1
+
+     MPI processes distributed on     1 nodes
+     R & G space division:  proc/nbgrp/npool/nimage =      64
+     235833 MiB available memory on the printing compute node when the environment starts
+
+     Message from routine matdyn:
+     Z* not found in file IceIh.fc, TO-LO splitting at q=0 will be absent!
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3134%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3090%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3086%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3142%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3101%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3074%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3146%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3095%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3087%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3130%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3133%
+     Max |d(i,j)-d*(j,i)| =  0.002166
+     Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3088%
+
+     MATDYN       :     23.45s CPU     26.41s WALL
+
+
+   This run was terminated on:   7:15:14  15Oct2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
