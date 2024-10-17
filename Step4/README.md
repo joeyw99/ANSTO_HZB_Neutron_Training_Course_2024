@@ -1,24 +1,24 @@
 # Structure relaxation
 
-This is the first step in the phonon calculation. We need to relax the crystal structure to minimize the forces between atoms.
+The structure relaxation is the first step in the phonon calculation. We need to relax the crystal structure to minimize the forces between atoms.
 We will use the relaxed structure to calculate the phonons. Effectively, we will obtain the phonon vibrations at 0 K temperature.
 
 ## Ions position relaxation. 
-First we will relax the ions positions. We need to change a couple of parameters in our input parameters file.
+First, we will relax the ions' positions. We need to change a couple of parameters in our input parameters file.
 
 ![relaxation_parameters.png](figures/relaxation_parameters.png)
 
-We will make a copy of template to run the simulation. 
+We will make a copy of the template to run the simulation. 
 ```shell
 cp -r template run1 
 cd run1
 nano setonix_job.sh
 ```
-Remember to update `setonix_job.sh` with the right project and email values. 
+Update `setonix_job.sh` with the right project and email values. 
 ```shell
 sbatch setonix_job.sh
 ```
-Once the job is executing we can monitor its progress by looking at the total force from the output file.
+Once the job runs, we can monitor its progress by looking at the total force from the output file.
 ```shell
 grep "Total force =" pw.out
 ```
@@ -28,15 +28,15 @@ The result is a decreasing list of values
 >     Total force =     0.552086     Total SCF correction =     0.000211
 >     Total force =     0.288968     Total SCF correction =     0.000141
 >     Total force =     0.565633     Total SCF correction =     0.000049
-The tolerance is given by `forc_conv_thr` value in the input file. In out case `forc_conv_thr=1.0000000000d-04`.
-Once the job finishes we can check the status by looking at the end of the output file.
+The tolerance is given by `forc_conv_thr` value in the input file. In our case, `forc_conv_thr=1.0000000000d-04`.
+Once the job finishes, we can check the status by looking at the end of the output file.
 ```shell
 tail pw.out
 ```
-If the job finished properly it should show 
+If the job finishes properly, it should show 
 >   JOB DONE.
 
-## Extracting the ions positions
+## Extracting the ions' positions
 
 We need to update our template with the relaxed position. The output file `pw.out` has the position at the end of the file. 
 Search for the following section:
@@ -85,7 +85,7 @@ End final coordinates
 ```
 ## Lattice relaxation
 
-In some cases we will need to relax the lattice parameters as well. The procedure is similar but we will need to make some changes to the input parameters.
-We need to change the calculation parameter to `vc-relax` and we need to add a `CELL` section. The following figure shows the corresponding changes to the file.
+In some cases, we will also need to relax the lattice parameters. The procedure is similar, but we will need to make some changes to the input parameters.
+We must change the calculation parameter to `vc-relax` and add a `CELL` section. The following figure shows the corresponding changes to the file.
 
 ![vc_relaxation_parameters.png](figures/vc_relaxation_parameters.png)
