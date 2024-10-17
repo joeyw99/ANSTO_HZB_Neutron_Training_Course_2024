@@ -2,7 +2,7 @@
 
 ## Quantum ESPRESSO
 
-Quantum ESPRESSO (QE) is a suite of Open-Source software for electronic-structure calculations and materials modeling.  It is based on density-functional theory, plane waves, and pseudopotentials.
+Quantum ESPRESSO (QE) is an Open-Source software suite for electronic-structure calculations and materials modelling. It is based on density-functional theory, plane waves, and pseudopotentials.
 
 Lattice Dynamics (LD) simulations are used to study the vibrations of atoms in a crystal lattice. These simulations can provide information about the phonon dispersion curves of a material, which is vital for understanding thermal and mechanical properties.
 
@@ -10,11 +10,11 @@ Lattice Dynamics (LD) simulations are used to study the vibrations of atoms in a
 
 ### Crystal structure
 
-For this practical session we will calculate the phonon density of states of Ice Ih. The directory `structure` contains a cif file for Ice Ih.
+For this practical session, we will calculate the phonon density of states of Ice Ih. The directory `structure` contains a cif file for Ice Ih.
 
 ![IceIh_std.png](figures/IceIh_std.png)
 
-The calculation consist of the following:
+The calculation consists of the following:
 1. Prerequisite 
 2. Introduction
 3. Input parameter optimization
@@ -27,8 +27,8 @@ Steps 3 to 6 of this tutorial describe the procedure.
 ### Input parameters
 
 QE requires an input parameter file and pseudo potential files for the structure. 
-A convenient way to generate QE input is provided by the following online tool [https://www.materialscloud.org/work/tools/qeinputgenerator](https://www.materialscloud.org/work/tools/qeinputgenerator)
-Select the `CIF File` format and upload the `IceIh_std.cif` file. Then click `Generate the PWscf input file` button. 
+A convenient way to generate QE input is by the following online tool [https://www.materialscloud.org/work/tools/qeinputgenerator](https://www.materialscloud.org/work/tools/qeinputgenerator)
+Select the `CIF File` format and upload the `IceIh_std.cif` file. Then click the `Generate the PWscf input file` button. 
 
 ![materialscloud_qe_input.png](figures/materialscloud_qe_input.png)
 
@@ -38,7 +38,7 @@ Download the zip file. It contains an input file and pseudopotentials.
 
 Copy the zip file to Setonix (see [how to copy files](../Step1/README.md)).
 
-The `template` directory contains the unzipped files. We renamed the parameter file `pw.in`. The original name `pwscf.in` indicates that it is an input file for QE's plan wave `pw.x` command that performs self-consistent field (scf) calculation.
+The `template` directory contains the unzipped files. We renamed the parameter file `pw.in`. The original name `pwscf.in` indicates that it is an input file for QE's plan wave `pw.x` command that performs self-consistent field (SCF) calculation.
 We will modify the file to perform several tasks. The directory `pseudo` contains the files for the `H` and `O` pseudo potentials required by the plane wave calculation method. 
 The full description of each parameter is given in the QE [online documentation](https://www.quantum-espresso.org/Doc/INPUT_PW.html). 
 
@@ -49,11 +49,11 @@ For now, we will only change the `prefix` of the calculation:
 ### Running a calculation in Setonix
 
 The `template` folder contains a [Slurm Batch Script for Setonix](https://pawsey.atlassian.net/wiki/spaces/US/pages/51927426/Example+Slurm+Batch+Scripts+for+Setonix+on+CPU+Compute+Nodes). 
-First we will make a copy of the `template` directory to run a single SCF calculation test.
+First, we will make a copy of the `template` directory to run a single SCF calculation test.
 ```shell
 cp -r template test
 ```
-Before submitting a job for execution we need to modify the script using a text editor `nano template/submit_jobs.sh`. Add the correct project number.
+Before submitting a job for execution, we need to modify the script using a text editor, you can use the following command: `nano template/submit_jobs.sh`. Add the correct project number.
 ```shell
 #SBATCH --account=pawseyXXXX
 ```
@@ -61,11 +61,11 @@ And also your email address.
 ```shell
 #SBATCH --mail-user=user@email.com
 ```
-To submitting the job we use the following command
+To submit the job we use the following command
 ```shell
 sbatch setonix_job.sh
 ```
-To monitor the state of the job we use the following command
+To monitor the state of the job, we use the following command
 ```shell
 squeue --me
 ```
