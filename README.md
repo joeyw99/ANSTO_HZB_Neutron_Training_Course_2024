@@ -17,7 +17,7 @@ cd ANSTO_HZB_Neutron_Training_Course_2024
 
 ### Prerequisites
 
-To run the practicals during the training course, you need access to [Setonix](https://pawsey.org.au/systems/setonix/) (the login details will be provided during the course).
+To run the practicals during the training course, you need access to [Setonix](https://pawsey.org.au/systems/setonix/) (We will provide the login details during the course).
 
 To run the practicals on your own HPC or server, you need to install Quantum Espresso. Follow the [installation instructions](https://www.quantum-espresso.org/Doc/user_guide/node7.html). 
 
@@ -36,8 +36,6 @@ Contact: https://www.ansto.gov.au/scientific-computing
 **Nuclear science and technology for the benefit of all Australians**  
 
 ## License
-
-Edit license statement or refer to file. 
 
 ANSTO_HZB_Neutron_Training_Course_2024 is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

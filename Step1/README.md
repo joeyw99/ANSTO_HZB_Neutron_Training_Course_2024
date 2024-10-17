@@ -1,36 +1,33 @@
-# Access to Setonix HPC. 
+# Prerequisites
 
-In this section, we will briefly overview Setonix and configure access to the HPC.
-See Setonix's full [documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51930840/Supercomputing+Documentation) for more details. 
+## Access to Setonix HPC. 
 
-If you have access to an HPC or server with Quantum Espresso installed, you can skip to Step 2.  
+This section will briefly overview Setonix and configure access to the HPC.
+See Setonix's complete [documentation](https://pawsey.atlassian.net/wiki/spaces/US/pages/51930840/Supercomputing+Documentation) for more details. 
 
-# Login instructions.
+If you can access an HPC or server with Quantum Espresso installed, skip Step 2.  
 
-**Note: The following instructions should be done before the start of the practicals!**
+## Login instructions.
 
-We will use Secure Shell (ssh) to connect. First, we need to install a ssh client. 
-For Windows computers we can use [PuTTY](https://putty.org/) or via [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). 
-For macOS and GNU/LINUX, we can use the `ssh` command from the Terminal.  
+**Note: You should complete the following instructions before the start of the practicals!**
 
-## Configure PuTTY.
-* Add `setonix.pawsey.org.au` to *Sessions --> Host Name*. Add Setonix to *Saved Sessions*. 
+We will use Secure Shell (SSH) to connect. First, we need to install an SSH client. 
+For Windows computers we can use [PuTTY](https://putty.org/) *(not recommended)* or via [WSL](https://learn.microsoft.com/en-us/windows/wsl/install). 
+For macOS and GNU/LINUX, we can use the `ssh` command from the terminal.  
 
-![putty_configuration1.png](figures/PuTTY_Session.png)
+## WSL installation. 
+You can install everything you need to run WSL with a single command. 
+Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator", 
+enter the wsl --install command, then restart your machine.
 
-* Add your Pawsey username (provided) under *Connection --> Data --> Auto-login username*.
-
-![putty_configuration2.png](figures/PuTTY_Connection_Data.png)
-
-* Return to *Sessions* nd click save. 
-
-![putty_configuration3.png](figures/PuTTY_Session2.png)
-
-* Click Open to start an ssh connection. Use your Pawsey password to login. 
+```PowerShell
+wsl --install
+```
+You should have an "Ubuntu on Windows" app. The app opens a *bash* terminal.
 
 ## Configure ssh with WSL, macOS or GNU/Linux. 
 
-To install the client in Ubuntu/Debian based distributions:
+To install the client in Ubuntu-based distributions:
 ```shell
 sudo apt install openssh-client
 ```
@@ -65,10 +62,29 @@ Host Setonix
      Port 22
 ```
 
-Save the file (Ctrl+O) and exit (Ctrl+X). Login to setonix using the following command:
+Save the file (Ctrl+O) and exit (Ctrl+X). Login to Setonix using the following command:
 ```shell
 ssh Setonix
 ```
+
+## Configure PuTTY.
+
+Windows users should try to install WSL instead of PuTTY. If you have WSL, skip this section. 
+* Add `setonix.pawsey.org.au` to *Sessions --> Host Name*. Add Setonix to *Saved Sessions*. 
+
+![putty_configuration1.png](figures/PuTTY_Session.png)
+
+* Add your Pawsey username (provided) under *Connection --> Data --> Auto-login username*.
+
+![putty_configuration2.png](figures/PuTTY_Connection_Data.png)
+
+* Return to *Sessions* nd click save. 
+
+![putty_configuration3.png](figures/PuTTY_Session2.png)
+
+* Click Open to start an SSH connection. Use your Pawsey password to log in. 
+
+To copy files between your computer and Setonix, you should install [WinSCP](https://winscp.net/eng/index.php).
 
 # Basic terminal commands 
 
@@ -92,3 +108,36 @@ cd /path/to/other/directory
 
 # How to copy files
 
+WSL has a special partition on the hard drive. You should copy files to your Linux home directory `Linux->Ubuntu-20.04->home->USER_NAME`
+
+![Linux_Directory.png](figures/Linux_Directory.png)
+
+Your files should appear when you list them from the bash terminal. To copy a file from your computer to Setonix use the following command:
+```shell
+scp pw.in Setonix:scratch/ANSTO_HZB_Neutron_Training_Course_2024/Step2
+```
+That will copy the input parameter file `pw.in` to the Setonix directory `scratch/ANSTO_HZB_Neutron_Training_Course_2024/Step2`. 
+
+To copy files from Setonix to you laptop you can use a similar command:
+```shell
+scp -r Setonix:scratch/ANSTO_HZB_Neutron_Training_Course_2024/Step4/result . 
+```
+This time we use `-r` (recursive) flag to copy the whole directory `scratch/ANSTO_HZB_Neutron_Training_Course_2024/Step4/result` the current directory is denoted by `.`
+
+# Preparing your Setonix workspace
+
+Login to Setonix using ssh. We will run Setonix jobs on a project partition called scratch. We will create a symbolic link (shortcut) to that partition.
+```shell
+ln -s /scratch/pawseyXXXX/USERNAME scratch 
+```
+The `ln -s` command makes a symbolic link from the scratch directory to a directory in your home. You should use the correct Pawsey project number and your username.
+To check the username, you can use the commands `whoami` or `pwd. ' Change directory to the scratch.
+```shell
+cd scratch
+```
+Clone the GitHub project in the scratch partition:
+```shell
+git clone git@github.com:pablogalaviz/ANSTO_HZB_Neutron_Training_Course_2024 
+cd ANSTO_HZB_Neutron_Training_Course_2024
+```
+In the following, we will refer to `ANSTO_HZB_Neutron_Training_Course_2024` directory as your Setonix project directory. 

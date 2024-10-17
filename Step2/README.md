@@ -15,13 +15,14 @@ For this practical session we will calculate the phonon density of states of Ice
 ![IceIh_std.png](figures/IceIh_std.png)
 
 The calculation consist of the following:
-1. Input parameter optimization
-2. Structure relaxation
-3. Self-consistent field calculation
-4. Phonon calculation using Density-Functional Perturbation Theory (DFPT)
-5. Visualization, Analysis and experimental validation. 
+1. Prerequisite 
+2. Introduction
+3. Input parameter optimization
+4. Structure relaxation
+5. Phonon calculation using Density-Functional Perturbation Theory (DFPT)
+6. Visualization, Analysis and experimental validation. 
 
-Steps 3 to 7 of this tutorial describe the procedure. 
+Steps 3 to 6 of this tutorial describe the procedure. 
 
 ### Input parameters
 
