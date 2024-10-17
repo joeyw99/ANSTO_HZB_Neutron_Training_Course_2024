@@ -7,8 +7,8 @@
  nk1 = 4
  nk2 = 4
  nk3 = 4
- deltaE = 0.1
- degauss = 0.5
+ deltaE = 1
+ degauss = 8.065610
  flfrq = 'IceIh.dos.freq'
  flvec = 'IceIh.dos.modes'
  fleig = 'IceIh.dos.eig'

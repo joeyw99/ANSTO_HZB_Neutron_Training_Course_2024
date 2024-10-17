@@ -1,5 +1,9 @@
 
-     Program MATDYN v.7.2 starts on 15Oct2024 at  7:14:47 
+     Program MATDYN v.7.3.1 starts on 17Oct2024 at 16: 0:38 
+        Git branch: develop
+        Last git commit: 4877a30719cc6e20c04c2eb5dc65117bbdaed33a
+        Last git commit date: Wed Oct 16 17:04:25 2024 +0000
+        Last git commit subject: Merge branch 'develop' into 'develop'
 
      This program is part of the open-source Quantum ESPRESSO suite
      for quantum simulation of materials; please cite
@@ -10,13 +14,11 @@
      in publications or presentations arising from this work. More details at
      http://www.quantum-espresso.org/quote
 
-     Parallel version (MPI & OpenMP), running on      64 processor cores
-     Number of MPI processes:                64
-     Threads/MPI process:                     1
+     Parallel version (MPI), running on    14 processors
 
      MPI processes distributed on     1 nodes
-     R & G space division:  proc/nbgrp/npool/nimage =      64
-     235833 MiB available memory on the printing compute node when the environment starts
+     R & G space division:  proc/nbgrp/npool/nimage =      14
+     13541 MiB available memory on the printing compute node when the environment starts
 
      Message from routine matdyn:
      Z* not found in file IceIh.fc, TO-LO splitting at q=0 will be absent!
@@ -45,10 +47,10 @@
      Max |d(i,j)-d*(j,i)| =  0.002166
      Max |d(i,j)-d*(j,i)|/|d(i,j)|:   1.3088%
 
-     MATDYN       :     23.45s CPU     26.41s WALL
+     MATDYN       :      5.61s CPU      6.80s WALL
 
 
-   This run was terminated on:   7:15:14  15Oct2024            
+   This run was terminated on:  16: 0:45  17Oct2024            
 
 =------------------------------------------------------------------------------=
    JOB DONE.
