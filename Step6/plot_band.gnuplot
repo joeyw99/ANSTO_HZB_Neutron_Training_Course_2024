@@ -1,3 +1,5 @@
+set term png
+set output "figures/band.png"
 set termoption enhanced
 cf=0.124
 

@@ -60,6 +60,7 @@ Host Setonix
      Hostname setonix.pawsey.org.au
      User <PAWSEY_USERNAME>
      Port 22
+     ForwardX11 yes
 ```
 
 Save the file (Ctrl+O) and exit (Ctrl+X). Login to Setonix using the following command:
