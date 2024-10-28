@@ -136,9 +136,16 @@ To check the username, you can use the commands `whoami` or `pwd. ' Change direc
 ```shell
 cd scratch
 ```
-Clone the GitHub project in the scratch partition:
+Clone the GitHub project in the scratch partition (if you have a fork, replace with the fork's GitHub address):
 ```shell
 git clone git@github.com:pablogalaviz/ANSTO_HZB_Neutron_Training_Course_2024 
 cd ANSTO_HZB_Neutron_Training_Course_2024
 ```
 In the following, we will refer to `ANSTO_HZB_Neutron_Training_Course_2024` directory as your Setonix project directory. 
+
+Add an ssh key following the GitHub [instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
+
+# Additional tools 
+
+Install [PyCharm Community Edition](https://www.jetbrains.com/edu-products/download/download-thanks-pce.html) to manage your project.
+
