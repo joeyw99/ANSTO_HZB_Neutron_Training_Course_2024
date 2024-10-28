@@ -23,7 +23,7 @@ To run the practicals on your own HPC or server, you need to install Quantum Esp
 
 ### Forking the GitHub repository
 
-Log in or sign in to GitHub. Open the repository's [page](https://github.com/pablogalaviz/ANSTO_HZB_Neutron_Training_Course_2024). Create a fork new fork.
+Log in or sign in to GitHub. Open the repository [(i.e., this page)](https://github.com/pablogalaviz/ANSTO_HZB_Neutron_Training_Course_2024). Create a new fork.
 
 ![GitHub_Fork.png](figures/GitHub_Fork.png)
 
