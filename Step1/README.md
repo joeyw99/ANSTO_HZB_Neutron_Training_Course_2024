@@ -25,6 +25,8 @@ wsl --install
 ```
 You should have an "Ubuntu on Windows" app. The app opens a *bash* terminal.
 
+You need to install [Xming](http://www.straightrunning.com/XmingNotes/) to open remote graphical applications.
+
 ## Configure ssh with WSL, macOS or GNU/Linux. 
 
 To install the client in Ubuntu-based distributions:
